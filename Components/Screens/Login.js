@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, Button, TextInput} from 'react-native';
+import { View, Text, Image, TouchableOpacity, Button, TextInput} from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import GlobalStyles from '../../GlobalStyles';
 import Home from '../Screens/Home'
@@ -14,22 +14,31 @@ class Screend extends React.Component {
             <View style={GlobalStyles.FirstScreen}>
                 <Image source={require('../Images/LogoPhrase.png')}/>
                 <Text>Log In to your account!</Text>
-                <TextInput
-                    style={{height: 40}}
-                    placeholder="Type here to translate!"
-                    onChangeText={(text) => this.setState({text})}
-                />
-                <TextInput
-                    style={{height: 40}}
-                    placeholder="Type here to translate!"
-                    onChangeText={(text) => this.setState({text})}
-                />       
-                <Button
-                    onPress={() => this.props.navigation.navigate('Second')}
-                    title="Log In"
-                    color="#841584"
-                    accessibilityLabel="Learn more about this purple button"
-                />
+                <TextInput style={GlobalStyles.inputBox} underlineColorAndroid='rgba(0,0,0,0)'
+          keyboardType= "email-address"
+          placeholder="Email"
+          //caretHidden = {true}
+          maxLength = {80}
+          //clearTextOnFocus = {true}
+          placeholderTextColor='#000000'
+          selectionColor="#000"
+          secureTextEntry = {false}
+          onChangeText={(text) => this.setState({text})}
+        />
+           <TextInput style={GlobalStyles.inputBox} underlineColorAndroid='rgba(0,0,0,0)'
+          //keyboardType={email-address}
+          maxLength = {40}
+          placeholder="Password"
+          placeholderTextColor='#000000'
+          selectionColor="#000"
+          secureTextEntry = {true}
+          onChangeText={(text) => this.setState({text})}
+        />     
+                <TouchableOpacity style={GlobalStyles.button}
+      onPress = {()=> this.props.navigation.navigate('Home')}
+      >
+      <Text style={GlobalStyles.buttonText}>Log In</Text>
+      </TouchableOpacity>
             </View>
         );
     }

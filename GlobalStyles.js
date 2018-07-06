@@ -7,13 +7,28 @@ export default  StyleSheet.create({
         alignItems: 'center', 
         justifyContent: 'center'
     },
-    button: {
-      width: 160,
-      height: 26,
-      backgroundColor: '#70BE70',
-      borderRadius: 2,
-      margin: 10,
-    },
+    button:{
+      width:300,
+      backgroundColor:'#0000ff',
+      borderRadius:25,
+      marginVertical:10,
+      paddingVertical:12
+  },
+  buttonText:{
+      fontSize:16,
+      fontWeight:'500',
+      color:'#ffffff',
+      textAlign:'center'
+  },
+  inputBox:{
+    width:300,
+    backgroundColor:'rgba(255,255,255,0.5)',
+    borderRadius: 25,
+    paddingHorizontal:16,
+    color:'#000000',
+    marginVertical:10,
+    fontSize:16
+},
     text:{
       textAlign: 'center',
       color: '#ffffff',
