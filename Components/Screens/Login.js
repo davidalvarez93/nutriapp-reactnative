@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity, Button, TextInput} from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import GlobalStyles from '../../GlobalStyles';
-import Home from '../Screens/Home'
+import Principal from '../Screens/Home'
 
 class Screend extends React.Component {
     constructor(props) {
@@ -35,7 +35,7 @@ class Screend extends React.Component {
           onChangeText={(text) => this.setState({text})}
         />     
                 <TouchableOpacity style={GlobalStyles.button}
-      onPress = {()=> this.props.navigation.navigate('Home')}
+      onPress = {()=> this.props.navigation.navigate('Second')}
       >
       <Text style={GlobalStyles.buttonText}>Log In</Text>
       </TouchableOpacity>
@@ -47,7 +47,7 @@ class Screend extends React.Component {
 const RootStack = createStackNavigator(
   {
     Home: Screend,
-    Second:Home,
+    Second: Principal,
   },
   {
     initialRouteName: 'Home',

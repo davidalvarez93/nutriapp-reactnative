@@ -10,6 +10,7 @@ import {
     createStackNavigator,
     createBottomTabNavigator
   } from 'react-navigation';
+//import Principal from '../Screens/LogInOrSignUp';
 import GlobalStyles from '../../GlobalStyles';
 
 class SignUp extends React.Component {
@@ -90,7 +91,7 @@ class SignUp extends React.Component {
           onChangeText={(text) => this.setState({text})}
         />
   <TouchableOpacity style={GlobalStyles.button}
-        onPress = {()=> this.props.navigation.navigate('Home')}
+        //onPress = {()=> this.props.navigation.navigate('Segunda')}
         >
         <Text style={GlobalStyles.buttonText}>Sign Up</Text>
         </TouchableOpacity>
@@ -103,7 +104,7 @@ class SignUp extends React.Component {
   const RootStack = createStackNavigator(
     {
       Sign: SignUp,
-      //LoginOrSignUp: LoginOrSignUp
+      //Segunda: Principal,
     },
     {
       initialRouteName: 'Sign',
