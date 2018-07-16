@@ -19,14 +19,42 @@ class MyHomeScreen extends React.Component {
 <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <Text> HOME PAGE! </Text> 
         <Button
-          onPress={() => this.props.navigation.navigate('Notifications')}
-          title="Go to notifications"
+          onPress={() => this.props.navigation.openDrawer()}
+          title="Drawer Open"
         />
 </View>
       );
     }
   }
   
+class MyProfile extends React.Component{
+  static navigationOptions = {
+    drawerLabel: 'Profile',
+    drawerIcon: ({tintColor}) => (
+      <Image
+      source={require('../Images/profile.jpg')}
+      style={[styles.icon, {tintColor: tintColor}]}
+      />
+    ),
+};
+
+render(){
+  return(
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Text> HOME PAGE! </Text> 
+        <Button
+          onPress={() => this.props.navigation.goBack()}
+          title="Go back home"
+        />
+         <Button
+          onPress={() => this.props.navigation.closeDrawer()}
+          title="Drawer close"
+        />
+        </View>
+    );
+  } 
+}
+
   class MyNotificationsScreen extends React.Component {
     static navigationOptions = {
       drawerLabel: 'Notifications',
@@ -69,23 +97,29 @@ const MiApp = createDrawerNavigator({
   Notifications: {
     screen: MyNotificationsScreen,
   },
+  Profile: {
+    screen: MyProfile,
+  },
+
 });
-  //export default createDrawerNavigator({
-    //Home: {
-      //screen: MyHomeScreen,
-    //},
-    //Notifications: {
-      //screen: MyNotificationsScreen,
-    //},
-  //});
-/*
+
+export default createDrawerNavigator({
+    Home: {
+      screen: MyHomeScreen,
+    },
+    Notifications: {
+      screen: MyNotificationsScreen,
+    },
+    Profile: {
+      screen: MyProfile,
+    },
+  }, 
   {
 drawerPosition: 'right',
 initialRouteName: 'Home',
-drawerBackgroundColor: 'orange',
+drawerBackgroundColor: '#0000ff',
 drawerWidth: 300,
-
-  });*/
+  });
   /*
 class Screenr extends React.Component {
     render() {
@@ -114,10 +148,10 @@ const RootStack = createStackNavigator(
     headerMode: 'none',
   },
 );*/
-
+/*
 export default class App extends React.Component {
   render() {
    // return <RootStack />;
    return <MiApp/>;
   }}
-  
+  */
