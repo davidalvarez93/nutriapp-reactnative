@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button, ScrollView, StatusBar, Image, StyleSheet } from 'react-native';
+import { View, Text, Button, ScrollView, StatusBar, Image, StyleSheet, renderCard, onSwiped,onSwipedAllnpm  } from 'react-native';
 import { createStackNavigator, createDrawerNavigator, TabRouter } from 'react-navigation';
 import GlobalStyles from '../../GlobalStyles';
 import SignUp from '../Screens/SignUp';
@@ -14,30 +14,13 @@ class MyHomeScreen extends React.Component {
       />
     ),
   };
-
   render() {
-    <View style={styles.container}>
-      <Swiper
-        cards={['DO', 'MORE', 'OF', 'WHAT', 'MAKES', 'YOU', 'HAPPY']}
-        renderCard={(card) => {
-          return (
-            <View style={styles.card}>
-              <Text style={styles.text}>{card}</Text>
-            </View>
-          )
-        }}
-        onSwiped={(cardIndex) => { console.log(cardIndex) }}
-        onSwipedAll={() => { console.log('onSwipedAll') }}
-        cardIndex={0}
-        backgroundColor={'#4FD0E9'}
-        stackSize={3}>
-        <Button
-          onPress={() => { console.log('oulala') }}
-          title="Press me">
-          You can press me
-            </Button>
-      </Swiper>
-    </View>
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text> Welcome Journeys </Text>
+
+      </View>
+    );
   }
 }
 
