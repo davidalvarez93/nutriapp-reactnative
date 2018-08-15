@@ -1,6 +1,12 @@
 import { StyleSheet } from 'react-native';
 
 export default  StyleSheet.create({
+
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
     //Global
     FirstScreen:{
         flex: 1, 
@@ -48,4 +54,31 @@ export default  StyleSheet.create({
       alignItems: 'center',
       backgroundColor: '#4D98EC',
     },
+
+
+
+
+    container: {
+      flex: 1,
+      //justifyContent: 'center',//centrar verticalmente
+      alignItems: 'center',//centrar horizontalmente
+      //backgroundColor: '#F5FCFF',
+    },
+    Font:{
+      fontFamily: 'Roboto', 
+      fontSize: 30
+    },
+    BgColor:{
+      backgroundColor: '#c5cae9'//"#bcddf2"
+    },
+    icon:{
+      //color:'#013e89'
+      color : '#01579b'//light-blue darken-4
+    }
   });
+
+  /*
+      icon: {
+      width: 24,
+      height: 24,
+    } */
