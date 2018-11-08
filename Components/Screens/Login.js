@@ -12,7 +12,7 @@ class Screend extends React.Component {
     render() {
         return (
             <View style={GlobalStyles.FirstScreen}>
-                <Image source={require('../Images/LogoPhrase.png')}/>
+                <Image style={GlobalStyles.imgmediana}source={require('../Images/Logo.png')}/>
                 <Text>Log In to your account!</Text>
                 <TextInput style={GlobalStyles.inputBox} underlineColorAndroid='rgba(0,0,0,0)'
           keyboardType= "email-address"

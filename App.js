@@ -22,11 +22,11 @@ class HelloScreen extends Component {
     return (
       <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('Second')}>
         <View style={GlobalStyles.FirstScreen}>
-          <Image source={require('./Components/Images/Logo.png')}/>
+          <Image style={GlobalStyles.imgmediana}source={require('./Components/Images/Logo.png')}/>
           {
           this.state.fontLoaded ? (
             <Text style={GlobalStyles.Font}>
-              Journeys
+              NutriApp
             </Text>
           ) : null
         }

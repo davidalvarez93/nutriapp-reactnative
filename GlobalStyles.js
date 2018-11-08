@@ -64,5 +64,22 @@ export default  StyleSheet.create({
     },
     icon:{
       color : '#01579b'
-    }
+    },
+
+    imgpequena:{
+      width: 50, height: 50,
+      },
+      
+      imgmediana:{
+        borderWidth:0,
+        borderTopLeftRadius: 0,
+        borderColor:'#0277bd', 
+        borderRadius:0,
+        marginVertical:0,
+      width: 175, height: 175,
+      },
+      imggrande:{
+      width: 200, height: 200,
+      },
+
   });

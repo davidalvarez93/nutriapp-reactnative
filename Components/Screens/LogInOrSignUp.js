@@ -9,8 +9,7 @@ class LogInOrSignUp extends React.Component {
   render() {
     return (
       <View style={GlobalStyles.FirstScreen}>
-        <Image source={require('../Images/LogoPhrase.png')}/>
-        <Image source={require('../Images/LogoImage.png')}/>
+        <Image style={GlobalStyles.imgmediana}source={require('../Images/Logo.png')}/>
         <Text>Texto Motivador </Text>
         <TouchableOpacity style={GlobalStyles.button}
       onPress = {()=> this.props.navigation.navigate('Second')}

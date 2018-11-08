@@ -1,14 +1,14 @@
 import { createDrawerNavigator } from 'react-navigation';
 
 import HomeScreen from './Home'
-import Profile from './Profile'
-import BookFlights from './BookFlights'
+import Profile from './profile'
+import Recetas from './Recetas'
 import Test from './Test2'
 import LogOut  from './LogOut'
 
 export default createDrawerNavigator({
   Home: { screen: HomeScreen },
-  Flights: { screen: BookFlights },
+  Recetas: { screen: Recetas },
   Test: { screen: Test },
   Profile: { screen: Profile },
   LogOut: { screen: LogOut },

@@ -4,12 +4,10 @@ import { Icon, Content, Container, Header, Button, Left, Right, Body, Text } fro
 import GlobalStyles from '../../GlobalStyles';
 
 
-export default class FlightsScreen extends Component {
+export default class RecetasScreen extends Component {
     static navigationOptions = {
-      drawerLabel: 'Reservar Vuelos',
-      drawerIcon: () => (
-        <Icon type="FontAwesome" name="plane" style={GlobalStyles.icon}/>
-      )
+      drawerLabel: 'Recetas',
+    
     };
     render() {
       return (
@@ -21,7 +19,7 @@ export default class FlightsScreen extends Component {
               </Button>
             </Left>
             <Body>
-              <Text>Reservar Vuelos</Text>
+              <Text>Agregar Recetas</Text>
             </Body>
             <Right>
               <Button transparent>
